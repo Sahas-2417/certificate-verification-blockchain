@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CertiChain | Certificate Verification</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ethers.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.5/ethers.umd.min.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="brand">
+            <div class="logo">◆</div>
+
+            <div>
+                <h2>CertiChain</h2>
+                <small>Blockchain Certificate Verification</small>
+            </div>
+        </div>
+
+        <button id="connectWallet" class="wallet-btn">
+            Connect Wallet
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <span class="tag">
+                DECENTRALIZED • SECURE • TRANSPARENT
+            </span>
+
+            <h1>Certificate Verification System</h1>
+
+            <p>
+                Issue, verify and manage academic certificates
+                securely using blockchain technology.
+            </p>
+
+            <div id="walletInfo" class="wallet-info">
+                Wallet Not Connected
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+
+            <!-- ISSUE CERTIFICATE -->
+            <div class="card">
+
+                <h2>Issue Certificate</h2>
+
+                <p class="description">
+                    College administrator can issue new certificates.
+                </p>
+
+                <label>Certificate ID</label>
+
+                <input
+                    type="text"
+                    id="issueId"
+                    placeholder="CERT001"
+                >
+
+                <label>Student Name</label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name"
+                >
+
+                <label>Course Name</label>
+
+                <input
+                    type="text"
+                    id="courseName"
+                    placeholder="Enter course name"
+                >
+
+                <label>Document URI</label>
+
+                <input
+                    type="text"
+                    id="documentURI"
+                    placeholder="https://example.com/certificate.pdf"
+                >
+
+                <button id="issueBtn" class="primary-btn" disabled>
+                    Issue Certificate
+                </button>
+
+                <div id="issueResult" class="result"></div>
+
+            </div>
+
+
+            <!-- VERIFY CERTIFICATE -->
+            <div class="card">
+
+                <h2>Verify Certificate</h2>
+
+                <p class="description">
+                    Recruiters can verify certificate authenticity.
+                </p>
+
+                <label>Certificate ID</label>
+
+                <input
+                    type="text"
+                    id="verifyId"
+                    placeholder="Enter Certificate ID"
+                >
+
+                <button id="verifyBtn" class="primary-btn">
+                    Verify Certificate
+                </button>
+
+                <div id="verifyResult" class="result"></div>
+
+            </div>
+
+
+            <!-- GET CERTIFICATE -->
+            <div class="card">
+
+                <h2>Get Certificate</h2>
+
+                <p class="description">
+                    Retrieve certificate details and document.
+                </p>
+
+                <label>Certificate ID</label>
+
+                <input
+                    type="text"
+                    id="getId"
+                    placeholder="Enter Certificate ID"
+                >
+
+                <button id="getBtn" class="primary-btn">
+                    Get Certificate
+                </button>
+
+                <div id="getResult" class="result"></div>
+
+            </div>
+
+
+            <!-- REVOKE CERTIFICATE -->
+            <div class="card">
+
+                <h2>Revoke Certificate</h2>
+
+                <p class="description">
+                    College administrator can revoke certificates.
+                </p>
+
+                <label>Certificate ID</label>
+
+                <input
+                    type="text"
+                    id="revokeId"
+                    placeholder="Enter Certificate ID"
+                >
+
+                <button id="revokeBtn" class="danger-btn" disabled>
+                    Revoke Certificate
+                </button>
+
+                <div id="revokeResult" class="result"></div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- INFORMATION -->
+        <section class="notice">
+
+            <h3>Blockchain Security</h3>
+
+            <p>
+                Certificate records are maintained on the blockchain.
+                Recruiters can verify certificates without contacting
+                the college directly.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 CertiChain |
+            Decentralized Certificate Verification System
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
